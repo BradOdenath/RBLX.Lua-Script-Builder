@@ -69,7 +69,7 @@ commands = {
 			end,
 		},
 		run_loadstring_local_script = {
-			comm = {'local', 'l'},
+			comm = {'local','l','x'},
 			func = function(code)
 				local status, response = pcall(function() return generate_script.local_s(code) end)
 				print(status, response)
@@ -92,6 +92,107 @@ commands = {
 				return status, response
 			end,
 		},
+		get = {
+			comm = {'get','g'},
+			func = function(code)
+				local post_commands = {
+					help = {
+						comm = {'help'},
+						func = function()
+							print("Lol help")
+						end,
+					},
+					ball = {
+						comm = {'ball','bl'},
+						func = function()
+
+						end,
+					},
+					base = {
+						comm = {'base','b'},
+						func = function()
+
+						end,
+					},
+					clean = {
+						comm = {'clean','c'},
+						func = function()
+
+						end,
+					},
+					debug_cmd = {
+						comm = {'debug','db'},
+						func = function()
+
+						end,
+					},
+					fixlighting = {
+						comm = {'fixlighting','fixl','fl'},
+						func = function()
+						end,
+					},
+					fly = {
+						comm = {'fly','f'},
+						func = function(character)
+						end,
+					},
+					forcefield = {
+						comm = {'forcefield','ff'},
+						func = function(ff_type)
+						end,
+					},
+					gamelist = {
+						comm = {'gamelist','games','servers'},
+						func = function()
+						end,
+					},
+					noforcefield = {
+						comm = {'noforcefield','noff','unff'},
+						func = function(ff_type)
+							if (ff_type == "retro" or ff_type == "classic") then
+								
+							else
+								
+							end
+						end,
+					},
+					noleaderboard = {
+						comm = {'noleaderboard','nolb'},
+						func = function()
+						end,
+					},
+					ps = {
+						comm = {'ps','pri'},
+						func = function(server_name)
+						end,
+
+					},
+					rejoin = {
+						comm = {'rejoin','rj'},
+						func = function(player)
+						end,
+					},
+					reset = {
+						comm = {'reset','r'},
+						func = function(player)
+							local success, output = pcall(function()
+								player:LoadCharacter()
+							end)
+						end,
+					},
+					sreset = {
+						comm = {'sreset','posrespawn','sr'},
+						func = function(character)
+						end,
+					},
+					teleport = {
+						comm = {'teleport','tp'},
+						func = function(characterA, characterB)
+						end,
+					},
+				} 
+			end,
+		}
 		
 	},
 	in_line_commands = {
