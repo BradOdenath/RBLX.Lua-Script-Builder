@@ -60,15 +60,91 @@ generate_script = {
 
 commands = {
 	pre_commands = {
-		run_loadstring_script = {
-			comm = {'script','c','do'},
-			func = function(code)
-				local status, response = pcall(function() return generate_script.s(code) end)
-				print(status, response)
-				return status, response
+		share = {
+			comm = {'share'},
+			func = function()
+
 			end,
 		},
-		run_loadstring_local_script = {
+		httpnewlocal = {
+			comm = {'httpnewlocal', 'hnl'},
+			func = function()
+
+			end,
+		},
+		newlocal = {
+			comm = {'newlocal','nl'},
+			func = function()
+
+			end,
+		},
+		createlocal = {
+			comm = {'createlocal','cl'},
+			func = function()
+
+			end,
+		},
+		save = {
+			comm = {'save'},
+			func = function(script_name)
+
+			end,
+		},
+		remove = {
+			comm = {'remove'},
+			func = function()
+
+			end,
+		},
+		http = {
+			comm = {'http','h'},
+			func = function()
+
+			end,
+		},
+		insert = {
+			comm = {'insert','i'},
+			func = function()
+
+			end,
+		},
+		run = {
+			comm = {'run','r'},
+			func = function()
+
+			end,
+		},
+		runlocalto = {
+			comm = {'runlocalto','rlt'},
+			func = function()
+
+			end,
+		},
+		rename = {
+			comm = {'rename'},
+			func = function()
+
+			end,
+		},
+		createsource = {
+			comm = {'createsource','cl'},
+			func = function()
+
+			end,
+		},
+		runnew = {
+			comm = {'runnew','rn'},
+			func = function()
+
+			end,
+		},
+		edithttp = {
+			comm = {'edithttp','createh','ch'},
+			func = function()
+
+			end,
+		},
+		local_script_execute = {
 			comm = {'local','l','x'},
 			func = function(code)
 				local status, response = pcall(function() return generate_script.local_s(code) end)
@@ -76,48 +152,148 @@ commands = {
 				return status, response
 			end,
 		},
-		run_https_script = {
-			comm = {'h'},
+		edit = {
+			comm = {'edit'},
+			func = function()
+
+			end,
+		},
+		runlocal = {
+			comm = {'runlocal','runl','rl'},
+			func = function()
+			end,
+		},
+		stop = {
+			comm = {'stop'},
+			func = function(script_name)
+
+			end,
+		},
+		script_execute = {
+			comm = {'script','c','do'},
 			func = function(code)
 				local status, response = pcall(function() return generate_script.s(code) end)
 				print(status, response)
 				return status, response
 			end,
 		},
-		run_https_local_script = {
-			comm = {'hl'},
+		unsave = {
+			comm = {'unsave'},
+			func = function()
+
+			end,
+		},
+		httplocal = {
+			comm = {'httplocal','httpl','hl'},
 			func = function(code)
 				local status, response = pcall(function() return generate_script.local_s(code) end)
 				print(status, response)
 				return status, response
 			end,
 		},
+		create = {
+			comm = {'create'},
+			func = function(script_name)
+
+			end,
+		},
 		get = {
 			comm = {'get','g'},
 			func = function(code)
 				local post_commands = {
-					help = {
-						comm = {'help'},
+					walls = {
+						comm = {'walls','wall','wl','w'},
+						func = function()
+							
+						end,	
+					},
+					cmd = {
+						comm = {'cmd','cmds','help'},
 						func = function()
 							print("Lol help")
 						end,
 					},
-					ball = {
-						comm = {'ball','bl'},
+					nobase = {
+						comm = {'nobase', 'nb'},
 						func = function()
-
+							
 						end,
 					},
-					base = {
-						comm = {'base','b'},
+					nil_command = {
+						comm = {'nil'},
 						func = function()
-
+							
 						end,
 					},
-					clean = {
-						comm = {'clean','c'},
+					prisb = {
+						comm = {'prisb'},
 						func = function()
-
+							
+						end,
+					},
+					nolocal = {
+						comm = {'nolocal','nol','nl'},
+					},
+					teleport = {
+						comm = {'teleport','tp'},
+						func = function(characterA, characterB)
+						end,
+					},
+					notools = {
+						comm = {'notools','not','nt'},
+						func = function()
+						end,
+					},
+					mods = {
+						comm = {'mods','modlist','admins'},
+						func = function()
+							
+						end,
+					},
+					fixcamera = {
+						comm = {'fixcamera','fixcam','fixc','fc'},
+						func = function()
+							
+						end,
+					},
+					r15dummy = {
+						comm = {'r15dummy','rdum','rd'},
+						func = function()
+							
+						end,
+					},
+					rejoin = {
+						comm = {'rejoin','rj'},
+						func = function(player)
+						end,
+					},
+					sreset = {
+						comm = {'sreset','posrespawn','sr'},
+						func = function(character)
+						end,
+					},
+					nonils = {
+						comm = {'nonils','nonil','nn'},
+						func = function()
+							
+						end,
+					},
+					encoderequire = {
+						comm = {'encoderequire'},
+						func = function()
+							
+						end,
+					},
+					clearterrain = {
+						comm = {'clearterrain','cleart','cleant','ct'},
+						func = function()
+							
+						end,
+					},
+					banneds = {
+						comm = {'banneds','banned'},
+						func = function()
+							
 						end,
 					},
 					debug_cmd = {
@@ -126,39 +302,22 @@ commands = {
 
 						end,
 					},
-					fixlighting = {
-						comm = {'fixlighting','fixl','fl'},
+					nosounds = {
+						comm = {'nosounds','nosound'},
 						func = function()
+							
 						end,
 					},
-					fly = {
-						comm = {'fly','f'},
-						func = function(character)
-						end,
-					},
-					forcefield = {
-						comm = {'forcefield','ff'},
-						func = function(ff_type)
-						end,
-					},
-					gamelist = {
-						comm = {'gamelist','games','servers'},
+					blocklist = {
+						comm = {'blocklist','blocked'},
 						func = function()
+							
 						end,
 					},
-					noforcefield = {
-						comm = {'noforcefield','noff','unff'},
-						func = function(ff_type)
-							if (ff_type == "retro" or ff_type == "classic") then
-								
-							else
-								
-							end
-						end,
-					},
-					noleaderboard = {
-						comm = {'noleaderboard','nolb'},
+					pselector = {
+						comm = {'pselector','selector','ptargeter','targeter','pt'},
 						func = function()
+							
 						end,
 					},
 					ps = {
@@ -167,32 +326,169 @@ commands = {
 						end,
 
 					},
-					rejoin = {
-						comm = {'rejoin','rj'},
-						func = function(player)
+					blockedassetlist = {
+						comm = {'blockedassetlist','bal'},
+						func = function()
+							
+						end,
+					},
+					noguis = {
+						comm = {'noguis','nog','ng'},
+						func = function()
+							
+						end,
+					},
+					noscripts = {
+						comm = {'noscripts','nos','ns'},
+						func = function()
+							
+						end,
+					},
+					switch = {
+						comm = {'switch','sw'},
+						func = function()
+							
+						end,
+					},
+					fixcharacter = {
+						comm = {'fixcharacter','fixchar'},
+						func = function()
+							
+						end,
+					},
+					noleaderboard = {
+						comm = {'noleaderboard','nolb'},
+						func = function()
+						end,
+					},
+					ball = {
+						comm = {'ball','bl'},
+						func = function()
+
+						end,
+					},
+					nowalls = {
+						comm = {'nowalls','nowall','nwl','nw'},
+						func = function()
+							
+						end,
+					},
+					noforcefield = {
+						comm = {'noforcefield','noff','unff'},
+						func = function(ff_type)
+							if (ff_type == "retro" or ff_type == "classic") then
+
+							else
+
+							end
+						end,
+					},
+					fixlighting = {
+						comm = {'fixlighting','fixl','fl'},
+						func = function()
+						end,
+					},
+					noteams = {
+						comm = {'noteams'},
+						func = function()
+							
+						end,
+					},
+					walkspeed = {
+						comm = {'walkspeed','speed','ws'},
+						func = function(speed)
+							
+						end,
+					},
+					publicsb = {
+						comm = {'publicsb','pubsb'},
+						func = function()
+							
+						end,
+					},
+					requirelist = {
+						comm = {'requirelist','rl','requireallowlist'},
+						func = function()
+							
+						end,
+					},
+					emojis = {
+						comm = {'emojis'},
+						func = function()
+							
 						end,
 					},
 					reset = {
-						comm = {'reset','r'},
+						comm = {'reset','respawn','r'},
 						func = function(player)
 							local success, output = pcall(function()
 								player:LoadCharacter()
 							end)
 						end,
 					},
-					sreset = {
-						comm = {'sreset','posrespawn','sr'},
+					forcefield = {
+						comm = {'forcefield','ff'},
+						func = function(ff_type)
+						end,
+					},
+					clean = {
+						comm = {'clean','c'},
+						func = function()
+
+						end,
+					},
+					fly = {
+						comm = {'fly','f'},
 						func = function(character)
 						end,
 					},
-					teleport = {
-						comm = {'teleport','tp'},
-						func = function(characterA, characterB)
+					network = {
+						comm = {'network','net'},
+						func = function()
+							
+						end,
+					},
+					blockedownerlist = {
+						comm = {'blockedownerlist','bol'},
+						func = function()
+							
+						end,
+					},
+					noquicks = {
+						comm = {'noquicks','noquick','noq','nq'},
+						func = function()
+							
+						end,
+					},
+					join = {
+						comm = {'join'},
+						func = function()
+							
+						end,
+					},
+					buildtools = {
+						comm = {'buildtools','btools','bt'},
+						func = function()
+							
+						end,
+					},
+					dummy = {
+						comm = {'dummy','dum','d'},
+						func = function()
+							
+						end,
+					},
+					base = {
+						comm = {'base','b'},
+						func = function()
+
 						end,
 					},
 				} 
 			end,
-		}
+		},
+		sb = {
+		},
 		
 	},
 	in_line_commands = {
