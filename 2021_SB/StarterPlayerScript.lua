@@ -488,9 +488,176 @@ commands = {
 			end,
 		},
 		sb = {
+			precommands = {
+				give = {
+					comm = {'give','g'},
+					func = function()
+
+					end
+				},
+				warn_command = {
+					comm = {'warn'},
+					func = function()
+
+					end
+				},
+				unallowrequire = {
+					comm = {'unallowrequire','unallowr'},
+					func = function()
+
+					end
+				},
+				allowrequire = {
+					comm = {'allowrequire','allowr'},
+					func = function()
+
+					end
+				},
+				requirelogs = {
+					comm = {'requirelogs'},
+					func = function()
+
+					end
+				},
+				setmodcolor = {
+					comm = {'setmodcolor'},
+					func = function()
+
+					end
+				},
+				pban = {
+					comm = {'pban'},
+					func = function()
+
+					end
+				},
+				unban = {
+					comm = {'unban','ub'},
+					func = function()
+
+					end
+				},
+				block = {
+					comm = {'block'},
+					func = function()
+
+					end
+				},
+				resetrequiretable = {
+					comm = {'resetrequiretable'},
+					func = function()
+
+					end
+				},
+				kick = {
+					comm = {'kick'},
+					func = function()
+
+					end
+				},
+				unblockownerid = {
+					comm = {'unblockownerid'},
+					func = function()
+
+					end
+				},
+				remoteblock = {
+					comm = {'remoteblock'},
+					func = function()
+
+					end
+				},
+				ban = {
+					comm = {'ban','b'},
+					func = function()
+
+					end
+				},
+				unblockrequireid = {
+					comm = {'unblockrequireid','unblockassetid','unbanassetid','unbanrequireid'},
+					func = function()
+
+					end
+				},
+				unblock = {
+					comm = {'unblock'},
+					func = function()
+
+					end
+				},
+				plrsgui = {
+					comm = {'plrsgui','guis','pgu'},
+					func = function()
+
+					end
+				},
+				undercover = {
+					comm = {'undercover'},
+					func = function()
+
+					end
+				},
+				remotetban = {
+					comm = {'remotetban','rtb'},
+					func = function()
+
+					end
+				},
+				remoteban = {
+					comm = {'remoteban','rb'},
+					func = function()
+
+					end
+				},
+				blockownerid = {
+					comm = {'blockownerid'},
+					func = function()
+
+					end
+				},
+				isbanned = {
+					comm = {'isbanned'--[[,'isBanned']]},
+					func = function()
+
+					end
+				},
+				shutdown = {
+					comm = {'shutdown'},
+					func = function()
+						
+					end,
+				},
+				modlogs = {
+					comm = {'modlogs'},
+					func = function()
+						
+					end,
+				},
+				tban = {
+					comm = {'tban','tb'},
+					func = function()
+						
+					end,
+				},
+				setmodicon = {
+					comm = {'setmodicon'},
+					func = function()
+						
+					end,
+				},
+				blockrequiredid = {
+					comm = {'blockrequireid','blockassetid','banassetid','banrequireid'},
+					func = function()
+						
+					end,
+				},
+			}
 		},
 		
 	},
+}
+
+somethingsomethingdarkside = { --idk bite me
 	in_line_commands = {
 		owner = {
 			comm = {owner_string}, 
